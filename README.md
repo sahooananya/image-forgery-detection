@@ -1,4 +1,4 @@
-# 🖼️ Image Forgery Detection using CNN
+# 🔍 Image Forgery Detection using CNN
 
 This project detects whether an image is **authentic** or **tampered** using a **Convolutional Neural Network (CNN)** trained on three public forgery datasets: CASIA2, Columbia, and COVERAGE.
 
@@ -18,10 +18,10 @@ The model was trained using a custom CNN architecture and evaluated using metric
 
 | Metric             | Value     |
 |--------------------|-----------|
-| ✅ Accuracy         | **73.1%** |
-| 🎯 Precision (T)    | 0.65      |
-| 🔁 Recall (T)       | 0.74      |
-| 📊 F1-Score (T)     | 0.69      |
+| ✅ Accuracy         | **74.87%** |
+| 🎯 Precision (T)    | 0.67      |
+| 🔁 Recall (T)       | 0.75      |
+| 📊 F1-Score (T)     | 0.71      |
 
 > `T = tampered class`
 
@@ -41,14 +41,47 @@ Images were preprocessed, resized to `128x128`, normalized, and split using an 8
 ## 🛠️ Project Structure
 
 ```bash
-├── dataset/                   # Raw datasets (CASIA2, Columbia, etc.)
-├── final_dataset/            # Train-test split organized into folders
+├── dataset/                        # Raw datasets (CASIA2, Columbia, etc.)
+├── final_dataset/                 # Train-test split organized into folders
 │   ├── train/
 │   └── test/
-├── forgery_dataset.npz       # Numpy compressed file (preprocessed data)
-├── preprocessing.py          # Script to process, merge and save datasets
-├── model_build_train.py      # Builds and trains the CNN model
-├── evaluate_model.py         # Evaluates model performance
-├── forgery_cnn_model.h5      # Saved baseline model (no augmentation)
-├── forgery_cnn_augmented.h5  # Saved model with image augmentation
-└── README.md                 # Project documentation
+├── forgery_dataset.npz            # Numpy compressed file (preprocessed data)
+├── prepare_final_dataset.py       # Script to process, merge, and save datasets
+├── model_build_train.py           # Builds and trains the CNN model
+├── model_evaluate.py              # Evaluates model performance
+├── forgery_cnn_model.h5           # Saved baseline model (no augmentation)
+├── forgery_cnn_augmented.keras    # Saved model with image augmentation
+├── results/
+│   ├── training_plot.png          # Training and validation loss/accuracy
+│   ├── confusion_matrix.png       # Confusion matrix
+│   ├── classification_report.txt  # Detailed precision/recall/F1 scores
+│   └── model_summary.txt          # CNN architecture summary
+└── README.md                      # Project documentation
+
+## 📈 Sample Outputs
+
+Here are some visualizations from the model evaluation phase:
+
+- **Confusion Matrix:**
+
+  ![Confusion Matrix](results/confusion_matrix.png)
+
+- **Training Accuracy & Loss:**
+
+  ![Training Plot](results/training_plot.png)
+
+
+
+🔍 Future Work
+Implement transfer learning using pretrained models (e.g., MobileNet, EfficientNet).
+
+Improve robustness using adversarial training.
+
+Extend to the localization of tampered regions using segmentation techniques.
+
+📚 References
+CASIA v2: http://forensics.idealtest.org/
+
+Columbia Dataset: https://www.ee.columbia.edu/
+
+COVERAGE Dataset: https://github.com/utkarsh-raj/
