@@ -46,9 +46,9 @@ Images were preprocessed, resized to `128x128`, normalized, and split using an 8
 │   ├── train/
 │   └── test/
 ├── forgery_dataset.npz       # Numpy compressed file (preprocessed data)
-├── preprocessing.py          # Script to process, merge and save datasets
+├── preprocessing.py          # Script to process, merge, and save datasets
 ├── model_build_train.py      # Builds and trains the CNN model
-├── evaluate_model.py         # Evaluates model performance
+├── model_evaluate.py         # Evaluates model performance
 ├── forgery_cnn_model.h5      # Saved baseline model (no augmentation)
 ├── forgery_cnn_augmented.h5  # Saved model with image augmentation
 └── README.md                 # Project documentation
