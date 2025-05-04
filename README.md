@@ -74,9 +74,7 @@ Here are some visualizations from the model evaluation phase:
 
 🔍 Future Work
 Implement transfer learning using pretrained models (e.g., MobileNet, EfficientNet).
-
 Improve robustness using adversarial training.
-
 Extend to the localization of tampered regions using segmentation techniques.
 
 📚 References
