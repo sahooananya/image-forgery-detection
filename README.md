@@ -58,19 +58,6 @@ Images were preprocessed, resized to `128x128`, normalized, and split using an 8
 │   └── model_summary.txt          # CNN architecture summary
 └── README.md                      # Project documentation
 
-## 📈 Sample Outputs
-
-Here are some visualizations from the model evaluation phase:
-
-- **Confusion Matrix:**
-
-  ![Confusion Matrix](results/confusion_matrix.png)
-
-- **Training Accuracy & Loss:**
-
-  ![Training Plot](results/training_plot.png)
-
-
 
 🔍 Future Work
 Implement transfer learning using pretrained models (e.g., MobileNet, EfficientNet).
