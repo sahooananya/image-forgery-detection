@@ -64,11 +64,11 @@ Here are some visualizations from the model evaluation phase:
 
 - **Confusion Matrix:**
 
-  ![Confusion Matrix](results/confusion_matrix.png)
+  ![Confusion Matrix](https://github.com/sahooananya/image-forgery-detection/blob/main/results/confusion_matrix.png)
 
 - **Training Accuracy & Loss:**
 
-  ![Training Plot](results/training_plot.png)
+  ![Training Plot](https://github.com/sahooananya/image-forgery-detection/blob/main/results/training_plot.png)
 
 
 
